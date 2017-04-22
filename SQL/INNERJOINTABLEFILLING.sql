@@ -1,0 +1,16 @@
+CREATE DATABASE bat;
+USE bat;
+CREATE TABLE boys (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(40), t_id INT NOT NULL);
+INSERT INTO boys (name,t_id) VALUES ('Tom',1);
+INSERT INTO boys VALUES (NULL, 'Graig',2);
+CREATE TABLE toys (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, toy VARCHAR(40));
+INSERT INTO toys VALUES (NULL, 'sword');
+INSERT INTO toys VALUES (NULL, 'axe');
+SELECT boys.name, toys.toy FROM boys INNER JOIN toys ON boys.t_id = toys.id;
+ALTER TABLE toys DROP COLUMN toy;
+ALTER TABLE toys ADD COLUMN name VARCHAR(40);
+INSERT INTO toys(name) SELECT name FROM boys GROUP BY name ORdER BY name;
+SELECT * FROM toys;
+SELECT *  FROM toys WHERE name IS NOT NULL;
+SELECT boys.name, toys.name FROM boys INNER JOIN toys ON toys.name IS NOT NULL;
+DROP database bat;

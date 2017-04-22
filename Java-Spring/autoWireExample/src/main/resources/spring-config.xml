@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="byNam" class="Collection" autowire="byName"/>
+    <bean id="byTyp" class="Collection" autowire="byType"/>
+    <bean id="byCons" class="Collection" autowire="constructor"/>
+
+    <bean id="foo" class="Foo"/>
+    <bean id="bar1" class="Bar"/>
+
+</beans>

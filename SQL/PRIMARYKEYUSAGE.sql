@@ -1,0 +1,8 @@
+CREATE DATABASE dr;
+USE dr;
+CREATE TABLE tabl (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(40), surname VARCHAR(40), PRIMARY KEY(id));
+INSERT INTO tabl VALUES (NULL,'Jon', 'Snow');
+INSERT INTo tabl VALUES (NULL, 'Jenna','Angel');
+INSERT INTO tabl VALUES(NULL, 'Margot', 'Cuvier');
+SELECT * FROM tabl;
+DROP DATABASE dr;

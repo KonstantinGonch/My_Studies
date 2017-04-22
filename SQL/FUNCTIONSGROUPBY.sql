@@ -1,0 +1,11 @@
+CREATE DATABASE sales;
+USE sales;
+CREATE tABLE sal (name VARCHAR(40), amount INT);
+INSERT INTO sal VALUES ('Xehanort', 13);
+INSERT INTO sal VALUES ('Jenna',10);
+INSERT INTO sal VALUES ('Margot',13);
+INSERT INTO sal VALUES ('Xehanort',12);
+INSERT INTO sal VALUES ('Jenna',10);
+INSERT INTO sal VALUES ('Margot',9);
+SELECT name, SUM(amount) FROM sal GROUP BY name ORDER BY SUM(amount)DESC;
+SELECT name, AVG(amount) FROM sal GROUP BY name ORDER BY AVG(amount)DESC;
